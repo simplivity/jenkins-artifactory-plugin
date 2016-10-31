@@ -143,7 +143,7 @@ public class MavenReleaseWrapper extends BuildWrapper {
     public void setUseReleaseBranch(boolean useReleaseBranch) {
         this.useReleaseBranch = useReleaseBranch;
     }
-    
+
     @Override
     public Environment setUp(AbstractBuild build, Launcher launcher, BuildListener listener)
             throws IOException, InterruptedException {
@@ -265,7 +265,7 @@ public class MavenReleaseWrapper extends BuildWrapper {
         return (DescriptorImpl) super.getDescriptor();
     }
 
-    @Extension
+    @Extension(ordinal = -2001)
     public static final class DescriptorImpl extends BuildWrapperDescriptor {
 
         public DescriptorImpl() {
