@@ -445,7 +445,7 @@ public class ArtifactoryGenericConfigurator extends BuildWrapper implements Depl
         return resolverCredentialsConfig;
     }
 
-    @Extension(optional = true)
+    @Extension(optional = true, ordinal = -2000)
     public static class DescriptorImpl extends BuildWrapperDescriptor {
         private List<Repository> releaseRepositories;
         private AbstractProject<?, ?> item;
