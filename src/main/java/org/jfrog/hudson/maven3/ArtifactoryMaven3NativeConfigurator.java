@@ -150,7 +150,7 @@ public class ArtifactoryMaven3NativeConfigurator extends BuildWrapper implements
         return Boolean.parseBoolean(env.get(ExtractorUtils.EXTRACTOR_USED));
     }
 
-    @Extension
+    @Extension(ordinal = -2000)
     public static class DescriptorImpl extends BuildWrapperDescriptor {
         private AbstractProject<?, ?> item;
 
