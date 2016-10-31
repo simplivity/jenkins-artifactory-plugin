@@ -397,7 +397,7 @@ public class ArtifactoryGenericConfigurator extends BuildWrapper implements Depl
         return resolverCredentialsConfig;
     }
 
-    @Extension(optional = true)
+    @Extension(optional = true, ordinal = -2000)
     public static class DescriptorImpl extends AbstractBuildWrapperDescriptor {
         private static final String DISPLAY_NAME = "Generic-Artifactory Integration";
         private static final String CONFIG_PREFIX = "generic";
