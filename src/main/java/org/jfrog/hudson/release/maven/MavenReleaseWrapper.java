@@ -327,7 +327,7 @@ public class MavenReleaseWrapper extends BuildWrapper {
         return (DescriptorImpl) super.getDescriptor();
     }
 
-    @Extension
+    @Extension(ordinal = -2001)
     public static final class DescriptorImpl extends AbstractBuildWrapperDescriptor {
         private static final String DISPLAY_NAME = "Enable Artifactory release management";
 

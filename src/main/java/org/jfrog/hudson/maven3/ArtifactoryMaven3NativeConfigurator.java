@@ -148,7 +148,7 @@ public class ArtifactoryMaven3NativeConfigurator extends BuildWrapper implements
         return Boolean.parseBoolean(env.get(ExtractorUtils.EXTRACTOR_USED));
     }
 
-    @Extension
+    @Extension(ordinal = -2000)
     public static class DescriptorImpl extends AbstractBuildWrapperDescriptor {
         private static final String DISPLAY_NAME = "Resolve artifacts from Artifactory";
         private static final String CONFIG_PREFIX = "maven";
