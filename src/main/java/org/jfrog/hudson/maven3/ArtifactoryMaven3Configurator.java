@@ -412,7 +412,7 @@ public class ArtifactoryMaven3Configurator extends BuildWrapper implements Deplo
         return (DescriptorImpl) super.getDescriptor();
     }
 
-    @Extension(optional = true)
+    @Extension(optional = true, ordinal = -2000)
     public static class DescriptorImpl extends AbstractBuildWrapperDescriptor {
         private static final String DISPLAY_NAME = "Maven3-Artifactory Integration";
         private static final String CONFIG_PREFIX = "maven3";
