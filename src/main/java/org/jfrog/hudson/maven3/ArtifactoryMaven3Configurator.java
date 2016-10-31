@@ -421,7 +421,7 @@ public class ArtifactoryMaven3Configurator extends BuildWrapper implements Deplo
         return (DescriptorImpl) super.getDescriptor();
     }
 
-    @Extension(optional = true)
+    @Extension(optional = true, ordinal = -2000)
     public static class DescriptorImpl extends BuildWrapperDescriptor {
         private AbstractProject<?, ?> item;
 
