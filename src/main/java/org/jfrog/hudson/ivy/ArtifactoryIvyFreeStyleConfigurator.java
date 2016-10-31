@@ -438,7 +438,7 @@ public class ArtifactoryIvyFreeStyleConfigurator extends BuildWrapper implements
         return (DescriptorImpl) super.getDescriptor();
     }
 
-    @Extension(optional = true)
+    @Extension(optional = true, ordinal = -2000)
     public static class DescriptorImpl extends AbstractBuildWrapperDescriptor {
         private static final String DISPLAY_NAME = "Ant/Ivy-Artifactory Integration";
         private static final String CONFIG_PREFIX = "ivy";
