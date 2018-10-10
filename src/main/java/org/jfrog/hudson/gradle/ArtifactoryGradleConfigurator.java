@@ -454,7 +454,9 @@ public class ArtifactoryGradleConfigurator extends BuildWrapper implements Deplo
 
                 } catch (Exception e) {
                     log.println("Error occurred while writing Gradle Init Script: " + e.getMessage());
-                    build.setResult(Result.FAILURE);
+                    if (build.isBuilding()) {
+                        build.setResult(Result.FAILURE);
+                    }
                 }
 
                 String tasks = StringUtils.EMPTY;
